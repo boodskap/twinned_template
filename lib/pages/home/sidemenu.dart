@@ -1,5 +1,5 @@
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key, this.selectedPage = SelectedPage.myHome});
@@ -79,6 +79,21 @@ class _MyHomePageState extends State<MyHomePage> {
             );
           },
         ),
+        actions: [
+          const CircleAvatar(
+            radius: 18,
+            child: Icon(
+              Icons.person,
+              size: 24,
+              color: Colors.black,
+            ),
+          ),
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {},
+            tooltip: 'Log Out',
+          ),
+        ],
       ),
       body: _getPageAt(_selectedIndex),
       drawer: Drawer(
