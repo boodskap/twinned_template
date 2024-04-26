@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:twinned_template/widget/label_textfield.dart';
 
 class ProfilePage extends StatefulWidget {
-  ProfilePage({
+  const ProfilePage({
     super.key,
   });
 
@@ -46,26 +46,6 @@ class _ProfilePageState extends State<ProfilePage> {
           vDivider,
           Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      minimumSize: const Size(140, 40),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(3),
-                      ),
-                    ),
-                    child: const Text(
-                      'Save',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                  hDivider,
-                ],
-              ),
               vDivider,
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.6,
@@ -139,6 +119,30 @@ class _ProfilePageState extends State<ProfilePage> {
                       ],
                     ),
                     vDivider,
+                  ],
+                ),
+              ),
+              vDivider,
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.6,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        minimumSize: const Size(140, 40),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(3),
+                        ),
+                      ),
+                      child: const Text(
+                        'Save',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                    hDivider,
                   ],
                 ),
               ),
