@@ -76,7 +76,7 @@ class _SignInPageState extends State<SignInPage> {
             child: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/iot3.jpg'),
+                  image: AssetImage('assets/images/landing_image.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -88,7 +88,7 @@ class _SignInPageState extends State<SignInPage> {
             height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/background_image.jpg'),
+                image: AssetImage('assets/images/login_background_image.jpg'),
                 fit: BoxFit.cover,
               ),
             ),

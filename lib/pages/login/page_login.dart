@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:twinned_template/core/constants.dart';
+import 'package:twinned_template/pages/home/sidemenu.dart';
 import 'package:twinned_template/widgets/commons/password_field.dart';
 import 'package:twinned_template/widgets/commons/userid_field.dart';
 
@@ -21,11 +22,11 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-               const SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Image.asset(
-          'assets/images/login_logo.png',
+          'assets/images/app_logo.png',
           height: 110,
           width: 110,
         ),
@@ -132,7 +133,10 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: BorderRadius.circular(18),
                     side: const BorderSide(color: secondaryColor)),
               ),
-              onPressed: () async {},
+              onPressed: () async {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SideMenu()));
+              },
               child: const Text(
                 'Login',
                 style: TextStyle(color: secondaryColor),
