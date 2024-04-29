@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:twinned_template/pages/profile/page_profile.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key, this.selectedPage = SelectedPage.myHome});
@@ -55,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case SelectedPage.menuItem3:
         return const Center(child: Text('Menu Item 3'));
       case SelectedPage.myProfile:
-        return const Center(child: Text('Profile Page'));
+        return const ProfilePage();
       default:
         return const Center(child: Text('Unknown Page'));
     }
@@ -71,9 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-
-
-              
               icon: Image.asset('assets/images/logo-large.png'),
               iconSize: 30,
               onPressed: () {

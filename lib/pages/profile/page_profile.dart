@@ -43,7 +43,6 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ),
           vDivider,
-          vDivider,
           Column(
             children: [
               vDivider,
