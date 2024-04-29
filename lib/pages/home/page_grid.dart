@@ -13,7 +13,7 @@ class IoTDevice {
 }
 
 class GridPage extends StatefulWidget {
-  const GridPage({Key? key}) : super(key: key);
+  const GridPage({super.key});
 
   @override
   State<GridPage> createState() => _GridPageState();
