@@ -30,13 +30,13 @@ class CardGridView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Text(
-                        'My Factory -> Production -> Tank',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      // const Text(
+                      //   'My Factory -> Production -> Tank',
+                      //   style: TextStyle(
+                      //     fontSize: 16,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
                       Expanded(
                         child: Align(
                           alignment: Alignment.center,
@@ -146,13 +146,13 @@ class CardGridView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Text(
-                        'My Factory -> Production -> Tank',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      // const Text(
+                      //   'My Factory -> Production -> Tank',
+                      //   style: TextStyle(
+                      //     fontSize: 16,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
                       Expanded(
                         child: Align(
                           alignment: Alignment.center,
@@ -224,13 +224,13 @@ class CardGridView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Text(
-                        'My Factory -> Production -> Tank',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      // const Text(
+                      //   'My Factory -> Production -> Tank',
+                      //   style: TextStyle(
+                      //     fontSize: 16,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
                       Expanded(
                         child: Align(
                           alignment: Alignment.center,
@@ -321,13 +321,13 @@ class CardGridView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Text(
-                        'My Factory -> Production -> Tank',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      // const Text(
+                      //   'My Factory -> Production -> Tank',
+                      //   style: TextStyle(
+                      //     fontSize: 16,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
                       Expanded(
                         child: Align(
                           alignment: Alignment.center,
