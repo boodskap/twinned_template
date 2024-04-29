@@ -118,9 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                       side: const BorderSide(color: primaryColor)),
                   minimumSize: const Size(140, 40),
                 ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
+                onPressed: () {},
                 child: const Text(
                   "Cancel",
                   style: TextStyle(color: primaryColor),

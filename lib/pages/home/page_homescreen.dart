@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twinned_template/pages/home/card_view.dart';
 import 'package:twinned_template/pages/home/page_datatable.dart';
 
 class IoTDevice {
@@ -93,12 +94,7 @@ class _HomePageViewState extends State<HomePageView> {
     switch (_viewType) {
       case ViewType.card:
         return const Center(
-          child: Card(
-            child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text('Home Card'),
-            ),
-          ),
+          child: CardGridView()
         );
       case ViewType.grid:
         return DataTablePage(devices: devices);
