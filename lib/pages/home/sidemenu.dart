@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:twinned_template/pages/home/page_grid.dart';
 import 'package:twinned_template/pages/profile/page_profile.dart';
 
 class SideMenu extends StatelessWidget {
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _getPageAt(SelectedPage index) {
     switch (index) {
       case SelectedPage.myHome:
-        return const Center(child: Text('Home Page'));
+        return const GridPage();
       case SelectedPage.menuItem1:
         return const Center(child: Text('Menu Item 1'));
       case SelectedPage.menuItem2:

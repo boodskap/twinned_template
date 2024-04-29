@@ -21,7 +21,6 @@ class GridPage extends StatefulWidget {
 
 class _GridPageState extends State<GridPage> {
   List<IoTDevice> devices = [
-    
     IoTDevice(name: 'Device 1', status: 'Online', temperature: 25.0),
     IoTDevice(name: 'Device 2', status: 'Offline', temperature: 30.0),
     IoTDevice(name: 'Device 3', status: 'Online', temperature: 28.0),
@@ -74,9 +73,9 @@ class _GridPageState extends State<GridPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('IoT Device Grid'),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('IoT Device Grid'),
+      // ),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -87,19 +86,22 @@ class _GridPageState extends State<GridPage> {
               DataColumn(
                 label: Text(
                   'Name',
-                  style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
                 ),
               ),
               DataColumn(
                 label: Text(
                   'Status',
-                  style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
                 ),
               ),
               DataColumn(
                 label: Text(
                   'Temperature',
-                  style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
                 ),
               ),
             ],
