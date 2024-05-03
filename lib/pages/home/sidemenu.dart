@@ -83,17 +83,27 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ),
         actions: [
-          const CircleAvatar(
-            radius: 18,
-            child: Icon(
-              Icons.person,
-              size: 24,
-              color: Colors.black,
+          Tooltip(
+            message: 'Profile',
+            child: GestureDetector(
+              onTap: () {
+                _onItemTapped(SelectedPage.myProfile);
+              },
+              child: const CircleAvatar(
+                radius: 18,
+                child: Icon(
+                  Icons.person,
+                  size: 24,
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
           IconButton(
             icon: const Icon(Icons.logout),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             tooltip: 'Log Out',
           ),
         ],
@@ -161,10 +171,4 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-enum SelectedPage {
-  myHome,
-  menuItem1,
-  menuItem2,
-  menuItem3,
-  myProfile,
-}
+enum SelectedPage { myHome, menuItem1, menuItem2, menuItem3, myProfile }
