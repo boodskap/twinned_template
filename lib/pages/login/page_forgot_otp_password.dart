@@ -36,9 +36,9 @@ class _ForgotOtpPageState extends State<ForgotOtpPage> {
             const Text(
               'OTP And Password',
               style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  color: Colors.white),
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
             ),
             OtpForm(
               pinController: _pinController,
@@ -46,74 +46,70 @@ class _ForgotOtpPageState extends State<ForgotOtpPage> {
             const SizedBox(
               height: 30,
             ),
-            Card(
-              color: Colors.white60,
-              elevation: 5,
-              child: Form(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 10,
-                      ),
-                      child: TextFormField(
-                        controller: _newPassController,
-                        decoration: InputDecoration(
-                            suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  isObscurednew = !isObscurednew;
-                                });
-                              },
-                              icon: isObscurednew
-                                  ? const Icon(Icons.visibility_off)
-                                  : const Icon(Icons.visibility),
-                            ),
-                            border: const OutlineInputBorder(),
-                            hintText: "Enter New Password",
-                            hintStyle: const TextStyle(color: Colors.black)),
-                        obscureText: isObscurednew,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "New Password Required";
-                          }
-                          return null;
-                        },
-                      ),
+            Form(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 10,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 10,
-                      ),
-                      child: TextFormField(
-                        controller: _conPassController,
-                        decoration: InputDecoration(
-                            suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  isObscured = !isObscured;
-                                });
-                              },
-                              icon: isObscured
-                                  ? const Icon(Icons.visibility_off)
-                                  : const Icon(Icons.visibility),
-                            ),
-                            border: const OutlineInputBorder(),
-                            hintText: "Enter Confirm Password",
-                            hintStyle: const TextStyle(color: Colors.black)),
-                        obscureText: isObscured,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "Confirm Password Required";
-                          }
-                          return null;
-                        },
-                      ),
+                    child: TextFormField(
+                      controller: _newPassController,
+                      decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                isObscurednew = !isObscurednew;
+                              });
+                            },
+                            icon: isObscurednew
+                                ? const Icon(Icons.visibility_off)
+                                : const Icon(Icons.visibility),
+                          ),
+                          border: const OutlineInputBorder(),
+                          hintText: "Enter New Password",
+                          hintStyle: const TextStyle(color: Colors.black)),
+                      obscureText: isObscurednew,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "New Password Required";
+                        }
+                        return null;
+                      },
                     ),
-                  ],
-                ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 10,
+                    ),
+                    child: TextFormField(
+                      controller: _conPassController,
+                      decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                isObscured = !isObscured;
+                              });
+                            },
+                            icon: isObscured
+                                ? const Icon(Icons.visibility_off)
+                                : const Icon(Icons.visibility),
+                          ),
+                          border: const OutlineInputBorder(),
+                          hintText: "Enter Confirm Password",
+                          hintStyle: const TextStyle(color: Colors.black)),
+                      obscureText: isObscured,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "Confirm Password Required";
+                        }
+                        return null;
+                      },
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(
@@ -126,7 +122,7 @@ class _ForgotOtpPageState extends State<ForgotOtpPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                       side: const BorderSide(color: secondaryColor)),
-                  minimumSize: const Size(330, 50),
+                  minimumSize: const Size(315, 50),
                 ),
                 onPressed: () async {
                   widget.pageController.animateToPage(0,
@@ -150,7 +146,9 @@ class _ForgotOtpPageState extends State<ForgotOtpPage> {
             children: [
               const Text(
                 'Powered By',
-                style: TextStyle(fontSize: 16, color: Colors.white),
+                style: TextStyle(
+                  fontSize: 16,
+                ),
               ),
               const SizedBox(width: 10),
               Image.asset(

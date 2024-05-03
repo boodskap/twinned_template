@@ -33,7 +33,7 @@ class _NavigationControlState extends State<NavigationControl> {
             height: MediaQuery.of(context).size.height,
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Colors.transparent,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(8),
             ),
             child: PageView(
@@ -69,7 +69,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     // Tablet or larger view
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Row(
         children: [
           Expanded(
@@ -83,15 +83,10 @@ class _SignInPageState extends State<SignInPage> {
               width: MediaQuery.of(context).size.width,
             ),
           ),
-          Container(
+          const VerticalDivider(),
+          SizedBox(
             width: 380,
             height: MediaQuery.of(context).size.height,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/login_background_image.jpg'),
-                fit: BoxFit.cover,
-              ),
-            ),
             child: Column(
               children: [
                 NavigationControl(
