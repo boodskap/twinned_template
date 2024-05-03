@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:twinned_template/pages/home/page_grid.dart';
+import 'package:twinned_template/pages/home/page_homescreen.dart';
 import 'package:twinned_template/pages/profile/page_profile.dart';
 
 class SideMenu extends StatelessWidget {
@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _getPageAt(SelectedPage index) {
     switch (index) {
       case SelectedPage.myHome:
-        return const GridPage();
+        return const HomePageView();
       case SelectedPage.menuItem1:
         return const Center(child: Text('Menu Item 1'));
       case SelectedPage.menuItem2:
@@ -83,17 +83,27 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ),
         actions: [
-          const CircleAvatar(
-            radius: 18,
-            child: Icon(
-              Icons.person,
-              size: 24,
-              color: Colors.black,
+          Tooltip(
+            message: 'Profile',
+            child: GestureDetector(
+              onTap: () {
+                _onItemTapped(SelectedPage.myProfile);
+              },
+              child: const CircleAvatar(
+                radius: 18,
+                child: Icon(
+                  Icons.person,
+                  size: 24,
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
           IconButton(
             icon: const Icon(Icons.logout),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             tooltip: 'Log Out',
           ),
         ],
@@ -161,10 +171,4 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-enum SelectedPage {
-  myHome,
-  menuItem1,
-  menuItem2,
-  menuItem3,
-  myProfile,
-}
+enum SelectedPage { myHome, menuItem1, menuItem2, menuItem3, myProfile }
