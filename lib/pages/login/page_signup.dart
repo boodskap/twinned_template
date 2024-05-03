@@ -41,35 +41,29 @@ class _SignUpPageState extends State<SignUpPage> {
                   const Text(
                     'Register New User',
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: Colors.white),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                   const SizedBox(height: 15),
-                  Card(
-                    color: Colors.white60,
-                    child: Padding(
-                      padding: const EdgeInsets.all(15),
-                      child: Column(
-                        children: [
-                          UseridField(
-                            hintText: "Enter your email",
-                            controller: _emailController,
-                          ),
-                          const SizedBox(height: 15),
-                          ValidatedTextField(
-                              hintText: "Enter the firstname",
-                              controller: _fnameController,
-                              minLength: 1),
-                          const SizedBox(height: 15),
-                          ValidatedTextField(
-                            hintText: "Enter the lastname",
-                            controller: _lnameController,
-                            minLength: 1,
-                          ),
-                        ],
+                  Column(
+                    children: [
+                      UseridField(
+                        hintText: "Enter your email",
+                        controller: _emailController,
                       ),
-                    ),
+                      const SizedBox(height: 15),
+                      ValidatedTextField(
+                          hintText: "Enter the firstname",
+                          controller: _fnameController,
+                          minLength: 1),
+                      const SizedBox(height: 15),
+                      ValidatedTextField(
+                        hintText: "Enter the lastname",
+                        controller: _lnameController,
+                        minLength: 1,
+                      ),
+                    ],
                   )
                 ],
               ),
@@ -106,7 +100,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                   onPressed: () {},
                   child: const Text(
-                    "SignUp",
+                    "Sign Up",
                     style: TextStyle(
                       color: secondaryColor,
                     ),
@@ -121,7 +115,6 @@ class _SignUpPageState extends State<SignUpPage> {
                 const Text(
                   'Already have an account?',
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 14,
                   ),
                 ),
@@ -150,7 +143,9 @@ class _SignUpPageState extends State<SignUpPage> {
             children: [
               const Text(
                 'Powered By',
-                style: TextStyle(fontSize: 16, color: Colors.white),
+                style: TextStyle(
+                  fontSize: 16,
+                ),
               ),
               const SizedBox(width: 10),
               Image.asset(

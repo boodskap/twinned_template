@@ -22,9 +22,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
-          height: 10,
-        ),
         Image.asset(
           'assets/images/app_logo.png',
           height: 110,
@@ -35,35 +32,28 @@ class _LoginPageState extends State<LoginPage> {
         ),
         const Text(
           'Sign In',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(fontSize: 24),
         ),
         const SizedBox(
           height: 10,
         ),
-        Card(
-          color: Colors.white70,
-          elevation: 5,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15),
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 10,
-                ),
-                UseridField(
-                    hintText: "Enter your mail", controller: _userController),
-                const SizedBox(
-                  height: 10,
-                ),
-                PasswordField(
-                    hintText: "Enter your password",
-                    controller: _passwordController),
-                const SizedBox(
-                  height: 10,
-                ),
-              ],
+        Column(
+          children: [
+            const SizedBox(
+              height: 10,
             ),
-          ),
+            UseridField(
+                hintText: "Enter your mail", controller: _userController),
+            const SizedBox(
+              height: 10,
+            ),
+            PasswordField(
+                hintText: "Enter your password",
+                controller: _passwordController),
+            const SizedBox(
+              height: 10,
+            ),
+          ],
         ),
         const SizedBox(
           height: 10,
@@ -86,7 +76,6 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const Text(
                     'Remember Me',
-                    style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -94,7 +83,6 @@ class _LoginPageState extends State<LoginPage> {
             InkWell(
               child: const Text(
                 'Forgot your password?',
-                style: TextStyle(color: Colors.white),
               ),
               onTap: () {
                 widget.pageController.animateToPage(2,
@@ -150,14 +138,13 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             const Text(
               "Don't have an account?",
-              style: TextStyle(color: Colors.white),
             ),
             TextButton(
                 onPressed: () {
                   widget.pageController.jumpToPage(1);
                 },
                 child: Text(
-                  "SignUp",
+                  "Sign Up",
                   style: TextStyle(
                       color: Colors.blue.shade500, fontWeight: FontWeight.bold),
                 ))
@@ -173,7 +160,6 @@ class _LoginPageState extends State<LoginPage> {
               const Text(
                 "Powered By",
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 16,
                 ),
               ),
